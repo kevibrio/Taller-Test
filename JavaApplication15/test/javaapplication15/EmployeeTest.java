@@ -41,28 +41,60 @@ public class EmployeeTest {
      * Test of cs method, of class Employee.
      */
     @Test
-    public void testCs() {
+    public void testCsWorkerUsd() {
         System.out.println("cs");
-        Employee instance = null;
-        float expResult = 0.0F;
+        Employee instance = new Employee(400, "USD", 10,EmployeeType.Worker);
+        float expResult = 464.33334F;
         float result = instance.cs();
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+    
+    @Test
+    public void testCsSupervisorUsd() {
+        System.out.println("cs");
+        Employee instance = new Employee(400, "USD", 10,EmployeeType.Supervisor);
+        float expResult = 467.83334F;
+        float result = instance.cs();
+        assertEquals(expResult, result, 0.0);
+    }
+    
+    @Test
+    public void testCsManagerUsd() {
+        System.out.println("cs");
+        Employee instance = new Employee(400, "USD", 10,EmployeeType.Manager);
+        float expResult = 471.33334F;
+        float result = instance.cs();
+        assertEquals(expResult, result, 0.0);
     }
 
     /**
      * Test of CalculateYearBonus method, of class Employee.
      */
     @Test
-    public void testCalculateYearBonus() {
+    public void testCalculateYearBonusWorkerUsd() {
         System.out.println("CalculateYearBonus");
-        Employee instance = null;
-        float expResult = 0.0F;
+        Employee instance = new Employee(400, "USD", 10,EmployeeType.Worker);
+        float expResult = 386.0F;
         float result = instance.CalculateYearBonus();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(expResult, result, 0.0); 
+    }
+    
+    @Test
+    public void testCalculateYearBonusSupervisorUsd() {
+        System.out.println("CalculateYearBonus");
+        Employee instance = new Employee(400, "USD", 10,EmployeeType.Supervisor);
+        float expResult = 593.0F;
+        float result = instance.CalculateYearBonus();
+        assertEquals(expResult, result, 0.0); 
+    }
+    
+    @Test
+    public void testCalculateYearBonusManagerUsd() {
+        System.out.println("CalculateYearBonus");
+        Employee instance = new Employee(400, "USD", 10,EmployeeType.Manager);
+        float expResult = 786.0F;
+        float result = instance.CalculateYearBonus();
+        assertEquals(expResult, result, 0.0); 
     }
     
 }
