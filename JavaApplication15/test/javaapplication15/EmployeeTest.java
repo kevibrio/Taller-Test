@@ -66,6 +66,33 @@ public class EmployeeTest {
         float result = instance.cs();
         assertEquals(expResult, result, 0.0);
     }
+    
+    @Test
+    public void testCsWorkerEur() {
+        System.out.println("cs");
+        Employee instance = new Employee(400, "EUR", 10,EmployeeType.Worker);
+        float expResult = 444.33334F;
+        float result = instance.cs();
+        assertEquals(expResult, result, 0.0);
+    }
+    
+    @Test
+    public void testCsSupervisorEur() {
+        System.out.println("cs");
+        Employee instance = new Employee(400, "EUR", 10,EmployeeType.Supervisor);
+        float expResult = 447.83334F;
+        float result = instance.cs();
+        assertEquals(expResult, result, 0.0);
+    }
+    
+    @Test
+    public void testCsManagerEur() {
+        System.out.println("cs");
+        Employee instance = new Employee(400, "EUR", 10,EmployeeType.Manager);
+        float expResult = 451.33334F;
+        float result = instance.cs();
+        assertEquals(expResult, result, 0.0);
+    }
 
     /**
      * Test of CalculateYearBonus method, of class Employee.
@@ -97,4 +124,30 @@ public class EmployeeTest {
         assertEquals(expResult, result, 0.0); 
     }
     
+    @Test
+    public void testCalculateYearBonusWorkerEur() {
+        System.out.println("CalculateYearBonus");
+        Employee instance = new Employee(400, "EUR", 10,EmployeeType.Worker);
+        float expResult = 386.0F;
+        float result = instance.CalculateYearBonus();
+        assertEquals(expResult, result, 0.0); 
+    }
+    
+    @Test
+    public void testCalculateYearBonusSupervisorEur() {
+        System.out.println("CalculateYearBonus");
+        Employee instance = new Employee(400, "EUR", 10,EmployeeType.Supervisor);
+        float expResult = 573.0F;
+        float result = instance.CalculateYearBonus();
+        assertEquals(expResult, result, 0.0); 
+    }
+    
+    @Test
+    public void testCalculateYearBonusManagerEur() {
+        System.out.println("CalculateYearBonus");
+        Employee instance = new Employee(400, "EUR", 10,EmployeeType.Manager);
+        float expResult = 766.0F;
+        float result = instance.CalculateYearBonus();
+        assertEquals(expResult, result, 0.0); 
+    }
 }
